@@ -20,5 +20,8 @@
         <module>orm-exercise</module>
         <module>orm-solution-01</module>
         <module>orm-solution-02</module>
+        <module>jpql-exercise</module>
+        <module>jpql-solution-01</module>
+        <module>jpql-solution-02</module>
     </modules>
 </project>
