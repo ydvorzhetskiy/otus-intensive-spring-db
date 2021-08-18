@@ -18,4 +18,9 @@ public class Avatar {
 
     @Column(name = "photo_url")
     private String photoUrl;
+
+    // owning-side
+    @ManyToOne
+    @JoinColumn(name = "holder_id")
+    private OtusStudent holder;
 }

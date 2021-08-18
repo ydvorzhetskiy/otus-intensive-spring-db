@@ -20,10 +20,12 @@ public class OtusStudent {
     private String name;
 
     // Указывает на связь между таблицами "один к одному"
-    @OneToOne(targetEntity = Avatar.class, cascade = CascadeType.ALL)
-    // Задает поле, по которому происходит объединение с таблицей для хранения связанной сущности
-    @JoinColumn(name = "avatar_id")
-    private Avatar avatar;
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            mappedBy = "holder",
+            orphanRemoval = true
+    )
+    private List<Avatar> avatar;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "student_id")
